@@ -1,0 +1,46 @@
+{
+    "env":
+    {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions":
+    {
+        "sourceType": "module",
+        "ecmaVersion": 2017
+    },
+    "plugins": [
+        "snakecasejs"
+    ],
+    "rules":
+    {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": [
+            "warn"
+        ],
+        "no-constant-condition": [
+            "warn"
+        ],
+        "snakecasejs/snakecasejs": "warn"
+    }
+}

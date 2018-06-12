@@ -1,0 +1,49 @@
+{
+  "name": "json-token-replace",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Patryk Rzucidlo [@ptkdev] <support@ptkdev.io> (https://ptkdev.it)",
+  "license": "GPL-3.0",
+  "homepage": "https://ptkdev.io",
+  "bugs": {
+    "url": "https://github.com/ptkdev/json-token-replace/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ptkdev/json-token-replace.git"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "example": "node example/test.js",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore --fix",
+    "precommit-lint-check": "echo 'Pre-commit lint checks...' && exit 0"
+  },
+  "pre-commit": [
+    "precommit-lint-check",
+    "lint"
+  ],
+  "keywords": [
+    "ptkdev",
+    "json",
+    "token",
+    "webtokens"
+  ],
+  "dependencies": {
+    "colors": "^1.2.1",
+    "eslint": "^4.19.1",
+    "path": "^0.12.7",
+    "request": "^2.85.0"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-snakecasejs": "^1.0.0",
+    "pre-commit": "^1.2.2"
+  }
+}
