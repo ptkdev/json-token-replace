@@ -1,6 +1,7 @@
 {
   "name": "json-token-replace",
-  "version": "1.0.0",
+  "description": "Replace the token string {{hello}} in json with value from another json where key is token {\"hello\":\"bye\"}",
+  "version": "1.0.1",
   "main": "main.js",
   "author": "Patryk Rzucidlo [@ptkdev] <support@ptkdev.io> (https://ptkdev.it)",
   "license": "GPL-3.0",
