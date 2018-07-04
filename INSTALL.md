@@ -1,15 +1,9 @@
 #### Setup
-1. Add dependencies on `package.json`
-```
-"dependencies": {
-	"json-token-replace": "^1.0.0",
-}
-```
-
+1. Run `npm install json-token-replace --save`
 2. In your code:
 ```
 const Jtr = require("json-token-replace");
 const jtr = new Jtr();
 
-let json_output = jtr.replace("./json_with_tokens.json", "./json.json");
+let json_output = jtr.replace(require("./json_with_tokens.json"), require("./json.json"), "{{", "}}");
 ```

@@ -1,3 +1,8 @@
+# v1.1.0 (July 04, 2018)
+
+* Feature: start string and end string params
+
+
 # v1.0.1 (June 29, 2018)
 
 * Update: README.md
