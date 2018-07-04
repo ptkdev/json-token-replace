@@ -26,6 +26,8 @@ Output:
 
 ## Features
 * [✓] Easy to use
+* [✓] Replace tokens in json file
+* [✓] Change your Start and End string of tokens
 
 ## Fast setup
 1. Run `npm install json-token-replace --save`
