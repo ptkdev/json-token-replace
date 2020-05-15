@@ -1,6 +1,6 @@
 ######################################################################################
 # License:        MIT - http://opensource.org/licenses/MIT                           #
-# Author:         Patryk Rzucidlo (@ptkdev) <support@ptkdev.io> https://ptkdev.it    #
+# Author:         Patryk Rzucidło (@ptkdev) <support@ptkdev.io> https://ptk.dev    #
 # Original:       octocat - https://github.com/octocat                               #
 # Latest version: https://github.com/ptkdev/dotfiles                                 #
 ######################################################################################
@@ -40,8 +40,13 @@ proguard/
 # Logs and databases #
 ######################
 logs/*.log
-logs/screenshot/*.png
-logs/screenshot/*.jpg
+logs/screenshots/*.png
+logs/screenshots/*.jpg
+examples/*.log
+examples/*.json
+databases/*.db
+databases/*.sql
+databases/*.json
 *.log
 *.sql
 *.sqlite
@@ -59,7 +64,6 @@ yarn-error.log
 .Trashes
 ehthumbs.db
 Thumbs.db
-loginpin.txt
 
 # Python #
 ##########
@@ -98,6 +102,7 @@ local.properties
 phpunit.xml
 /vendor
 composer.phar
+/bower_components
 
 # Runtime data #
 ################
@@ -111,9 +116,12 @@ pids
 ##########
 npm-debug.log
 /node_modules
-/bower_components
-package-lock.json
 
-# NodePress.js #
-################
+# App #
+#######
+plugins/*/
 config.js
+config/*.js
+configs/*.js
+loginpin.txt
+configs/loginpin.txt
