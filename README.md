@@ -7,10 +7,10 @@
 > Replace token string {{name}} in json with values from another json where key is token {"name":"Alex"}
 
 input:
-`{ "text": "hello {{john}}" }`
+`{ "text": "hello {{name}}" }`
 
 tokens:
-`{ "john":"Alex" }`
+`{ "name":"Alex" }`
 
 output:
 `{ "text": "hello Alex"}`
@@ -35,7 +35,7 @@ output:
 ## 💡 Features
 * [✔️] Easy to use
 * [✔️] MIT License
-* [✔️] Replace token string {{hello}} in json with values from another json where key is token {"name":"Alex"}
+* [✔️] Replace token string {{name}} in json with values from another json where key is token {"name":"Alex"}
 
 ## 👔 Screenshot
 [![JSON Token Replace](https://raw.githubusercontent.com/ptkdev/json-token-replace/nightly/.github/assets/screenshot/json-token-replace-screen1.png)](https://raw.githubusercontent.com/ptkdev/json-token-replace/nightly/.github/assets/screenshot/json-token-replace-screen1.png)
