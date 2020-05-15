@@ -1,4 +1,4 @@
-# v1.2.0 (May 15, 2020)
+# v1.2.2 (May 15, 2020)
 * Refactoring
 * Moved from `json-token-replace` to `@ptkdev/json-token-replace`
 

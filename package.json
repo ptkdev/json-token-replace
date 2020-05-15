@@ -1,7 +1,7 @@
 {
 	"name": "@ptkdev/json-token-replace",
 	"description": "JSON Token Replace: Replace token string {{name}} in json with values from another json where key is token {\"name\":\"Alex\"}",
-	"version": "1.2.0",
+	"version": "1.2.2",
 	"main": "modules/jtr.js",
 	"author": "Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)",
 	"license": "MIT",
@@ -27,6 +27,7 @@
 		"git-pull-upstream": "git pull upstream master && git pull upstream beta && git pull upstream nightly",
 		"git-pull": "git pull --recursive",
 		"git-ignore-reset": "git rm -r --cached . && git add . && git commit -m \"[Fix] Removing all files in .gitignore\"",
+		"npm-publish": "npm run clean && npm publish --access public",
 		"npm-publish-master": "git checkout master && npm publish",
 		"npm-publish-beta": "git checkout beta && npm publish --tag beta",
 		"npm-publish-nightly": "git checkout nightly && npm publish --tag nightly",
