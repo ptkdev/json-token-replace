@@ -9,12 +9,10 @@
  * @license: MIT License
  *
  */
-import m from "@app/functions/module";
-import configs from "@configs/config";
+import jtr from "@app/functions/jtr";
 
 (async () => {
-	const { app } = await m({ text: "hello-world" });
+	const { json } = await jtr({ text: "hello-world" });
 
-	console.log(app());
-	console.log(`debug: ${configs.debug}`);
+	console.log(json());
 })();

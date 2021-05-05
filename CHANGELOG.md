@@ -1,7 +1,6 @@
-# v1.0.20210412 (April 12, 2021)
+# v2.0.0 (May 03, 2021)
 
--   Fix: minor fix
--   Fix: readme of issues
+-   Porting: to Typescript
 
 <!-- all-shields/sponsors-badges:START -->
 
@@ -9,14 +8,15 @@
 
 <!-- all-shields/sponsors-badges:END -->
 
-# v1.0.20210404 (April 04, 2021)
+# v1.2.2 (May 15, 2020)
 
--   Feature: Setup
+-   Refactoring
+-   Moved from `json-token-replace` to `@ptkdev/json-token-replace`
 
-# v1.0.20210330 (March 31, 2021)
+# v1.1.0 (July 04, 2018)
 
--   Minor updates
+-   Feature: start string and end string params
 
-# v1.0.20210330 (March 30, 2021)
+# v1.0.0 (June 12, 2018)
 
--   First release
+-   First Release.

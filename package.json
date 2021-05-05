@@ -1,9 +1,9 @@
 {
-	"name": "@ptkdev/node-module-boilerplate",
-	"displayName": "Node NPM Library Boilerplate",
-	"description": "Create your npm library with this friendly boilerplate. Use this respository as template for your new node library/module",
-	"version": "1.0.20210412",
-	"main": "dist/functions/module.js",
+	"name": "@ptkdev/json-token-replace",
+	"displayName": "JSON Token Replace",
+	"description": "Replace liquid variables {{name}} in json with values from another json where key is token {\"name\":\"Alex\"}",
+	"version": "2.0.0",
+	"main": "dist/functions/jtr.js",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -12,20 +12,19 @@
 	"license-docs": "CC BY 4.0",
 	"license-translations": "CC BY 4.0",
 	"license-images": "CC BY-NC 4.0",
-	"homepage": "https://github.com/ptkdev-boilerplate/node-module-boilerplate",
+	"homepage": "https://github.com/ptkdev/json-token-replace",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ptkdev-boilerplate/node-module-boilerplate.git"
+		"url": "https://github.com/ptkdev/json-token-replace.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ptkdev-boilerplate/node-module-boilerplate/issues"
+		"url": "https://github.com/ptkdev/json-token-replace/issues"
 	},
 	"engines": {
 		"node": ">=14.0.0"
 	},
 	"scripts": {
 		"init": "npm install && husky install",
-		"setup": "ts-node --skip-project scripts/setup.ts && ts-node --skip-project scripts/changelog.ts && npm run pre-commit",
 		"start": "node dist/functions/run.js",
 		"dev": "ts-node scripts/configs.ts && ts-node scripts/debug.ts --enable && ts-node scripts/rmdist.ts && nodemon --exec 'npm run build && npm run start'",
 		"build": "ttsc",
@@ -35,7 +34,7 @@
 		"lint": "npm run lint-prettify && eslint . --cache --ext .ts,.js",
 		"lint-fix": "npm run lint-prettify && eslint . --cache --ext .ts,.js --fix",
 		"lint-prettify": "prettier --write **/*.{ts,md,json}",
-		"git-set-upstream": "git remote add upstream git@github.com:ptkdev-boilerplate/node-module-boilerplate.git && git fetch upstream",
+		"git-set-upstream": "git remote add upstream git@github.com:ptkdev/json-token-replace.git && git fetch upstream",
 		"git-pull-upstream": "git pull upstream main && git pull upstream beta && git pull upstream nightly",
 		"git-pull": "git pull --recursive",
 		"git-ignore-reset": "git rm -r --cached . && git add . && git commit -m \"[Fix] Removing all files in .gitignore\"",
@@ -49,20 +48,25 @@
 		"pkg-update": "npm update",
 		"pkg-upgrade": "npx npm-check-updates -u && npm install && husky install"
 	},
+	"dependencies": {
+		"chokidar": "^3.5.1",
+		"nunjucks": "^3.2.3"
+	},
 	"devDependencies": {
-		"@ptkdev/all-shields-cli": "^2.0.0",
-		"@types/jest": "^26.0.22",
-		"@types/node": "^14.14.41",
+		"@ptkdev/all-shields-cli": "^2.0.2",
+		"@types/jest": "^26.0.23",
+		"@types/node": "^15.0.1",
+		"@types/nunjucks": "^3.1.4",
 		"@types/shelljs": "^0.8.8",
 		"@typescript-eslint/eslint-plugin": "^4.22.0",
 		"@typescript-eslint/parser": "^4.22.0",
 		"all-contributors-cli": "^6.20.0",
-		"eslint": "^7.24.0",
-		"eslint-plugin-jest": "^24.3.5",
-		"eslint-plugin-jsdoc": "^32.3.0",
+		"eslint": "^7.25.0",
+		"eslint-plugin-jest": "^24.3.6",
+		"eslint-plugin-jsdoc": "^33.0.0",
 		"husky": "^6.0.0",
 		"jest": "^26.6.3",
-		"json": "^10.0.0",
+		"json": "^11.0.0",
 		"markserv": "^1.17.4",
 		"nodemon": "^2.0.7",
 		"pm2": "^4.5.6",
@@ -74,17 +78,19 @@
 		"ttypescript": "^1.5.12",
 		"typescript": "^4.2.4",
 		"typescript-transform-paths": "^2.2.3",
-		"yargs": "^16.2.0"
+		"yargs": "^17.0.0"
 	},
 	"keywords": [
 		"ptkdev",
-		"node",
-		"node-module",
-		"node-library",
-		"node-module-boilerplate",
-		"node-library-boilerplate",
-		"boilerplate",
-		"github-template"
+		"json",
+		"json-token-replace",
+		"replace",
+		"replace-liquid-variable",
+		"token-replace",
+		"json-replace",
+		"web-token-json",
+		"liquid-variables",
+		"assoc-array-replace"
 	],
 	"contributors": []
 }

@@ -8,7 +8,7 @@
 			"id": "header-badges",
 			"badges": [
 				{
-					"url": "https://github.com/ptkdev-boilerplate/node-module-boilerplate/blob/main/CHANGELOG.md",
+					"url": "https://github.com/ptkdev/json-token-replace/blob/main/CHANGELOG.md",
 					"color": "lightgray",
 					"label": "version",
 					"message": "v{{version}}",
@@ -18,16 +18,16 @@
 					"platform": "shields"
 				},
 				{
-					"url": "https://www.npmjs.com/package/@ptkdev/node-module-boilerplate",
+					"url": "https://www.npmjs.com/package/@ptkdev/json-token-replace",
 					"color": "#CC3534",
 					"label": "npm",
 					"logo": "npm",
 					"style": "flat",
-					"custom": "/npm/v/@ptkdev/node-module-boilerplate?color=CC3534&logo=npm",
+					"custom": "/npm/v/@ptkdev/json-token-replace?color=CC3534&logo=npm",
 					"platform": "shields"
 				},
 				{
-					"url": "https://github.com/ptkdev-boilerplate/node-module-boilerplate/blob/main/LICENSE.md",
+					"url": "https://github.com/ptkdev/json-token-replace/blob/main/LICENSE.md",
 					"color": "brightgreen",
 					"label": "license",
 					"message": "{{license}}",

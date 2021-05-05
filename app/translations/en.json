@@ -4,6 +4,6 @@
 		"license": "CC BY 4.0",
 		"contributors": ["Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)"]
 	},
-	"app_name": "node-module-boilerplate",
+	"app_name": "json-token-replace",
 	"hello": "Hello World!"
 }

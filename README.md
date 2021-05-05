@@ -1,14 +1,12 @@
-# 🧰 node-module-boilerplate
+# 🧰 json-token-replace
 
 <!-- all-shields/header-badges:START -->
 
-[![v1.0.20210412](https://img.shields.io/badge/version-v1.0.20210412-lightgray.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate/node-module-boilerplate/blob/main/CHANGELOG.md) [![](https://img.shields.io/npm/v/@ptkdev/node-module-boilerplate?color=CC3534&logo=npm)](https://www.npmjs.com/package/@ptkdev/node-module-boilerplate) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/ptkdev-boilerplate/node-module-boilerplate/blob/main/LICENSE.md) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Discord Server](https://discordapp.com/api/guilds/383373985666301975/embed.png)](https://discord.ptkdev.io)
+[![v2.0.0](https://img.shields.io/badge/version-v2.0.0-lightgray.svg?style=flat&logo=)](https://github.com/ptkdev/json-token-replace/blob/main/CHANGELOG.md) [![](https://img.shields.io/npm/v/@ptkdev/json-token-replace?color=CC3534&logo=npm)](https://www.npmjs.com/package/@ptkdev/json-token-replace) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/ptkdev/json-token-replace/blob/main/LICENSE.md) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Discord Server](https://discordapp.com/api/guilds/383373985666301975/embed.png)](https://discord.ptkdev.io)
 
 <!-- all-shields/header-badges:END -->
 
-Create your npm library with this friendly boilerplate. Use this respository as template for your new node library/module
-
-This is a [github template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/), you can fork it or [use as template](https://github.com/ptkdev-boilerplate/node-module-boilerplate/generate) for start new project with this repository as hello-world. I hate start new project with empty template, often i missing correct configuration, readme instruction or i need of samples of code. Use this repository as template solve this problem.
+Replace liquid variables {{name}} in json with values from another json where key is token {\"name\":\"Alex\"}
 
 ## 🎁 Support: Donate
 
@@ -27,13 +25,12 @@ This is a [github template](https://github.blog/2019-06-06-generate-new-reposito
 -   📚 [Documentation](#-documentation)
 -   🔨 [Developer Mode](#-developer-mode)
 -   -   🏁 [Run Project](#-run-project)
--   -   💾 [Setup Project](#-setup-project)
 -   👨‍💻 [Contributing](#-contributing)
--   🐛 [Known Bugs](https://github.com/ptkdev-boilerplate/node-module-boilerplate/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+-   🐛 [Known Bugs](https://github.com/ptkdev/json-token-replace/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 -   🍻 Community:
-    -   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-module-boilerplate/main/.github/assets/social_telegram.png" height="18px"> Telegram ([🇬🇧 English](http://t.me/ptkdev_support) | [🇮🇹 Italian](http://t.me/ptkdev_support_italian))
-    -   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-module-boilerplate/main/.github/assets/social_discord.png" height="18px"> [Discord](http://discord.ptkdev.io) ([🇬🇧 English](https://discord.gg/jqUSGPKdmA) | [🇮🇹 Italian](https://discord.gg/SJFcbvG6RU) | [🇵🇱 Polish](https://discord.gg/25vg4VFhb7))
-    -   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-module-boilerplate/main/.github/assets/social_twitter.png" height="18px"> [Twitter](http://twitter.com/ptkdevio)
+    -   <img src="https://raw.githubusercontent.com/ptkdev/json-token-replace/main/.github/assets/social_telegram.png" height="18px"> Telegram ([🇬🇧 English](http://t.me/ptkdev_support) | [🇮🇹 Italian](http://t.me/ptkdev_support_italian))
+    -   <img src="https://raw.githubusercontent.com/ptkdev/json-token-replace/main/.github/assets/social_discord.png" height="18px"> [Discord](http://discord.ptkdev.io) ([🇬🇧 English](https://discord.gg/jqUSGPKdmA) | [🇮🇹 Italian](https://discord.gg/SJFcbvG6RU) | [🇵🇱 Polish](https://discord.gg/25vg4VFhb7))
+    -   <img src="https://raw.githubusercontent.com/ptkdev/json-token-replace/main/.github/assets/social_twitter.png" height="18px"> [Twitter](http://twitter.com/ptkdevio)
 
 ## 💡 Features
 
@@ -52,16 +49,16 @@ This is a [github template](https://github.blog/2019-06-06-generate-new-reposito
 
 ## 🚀 Usage
 
-1. In your node project run: `npm install @ptkdev/node-module-boilerplate@latest --save`
+1. In your node project run: `npm install @ptkdev/json-token-replace@latest --save`
 2. Usage (async):
 
 ```javascript
-import m from "@ptkdev/node-module-boilerplate";
+import jtr from "@ptkdev/json-token-replace";
 
 (async () => {
-	const { app } = await m({ text: "hello-world" });
+	const { json } = await jtr({ json: require("./input.json"), tokens: require("./tokens.json") });
 
-	console.log(app());
+	console.log(json());
 })();
 ```
 
@@ -69,13 +66,9 @@ import m from "@ptkdev/node-module-boilerplate";
 
 #### 🏁 Run Project
 
-1. Clone this repository or download [nightly](https://github.com/ptkdev-boilerplate/node-module-boilerplate/archive/nightly.zip), [beta](https://github.com/ptkdev-boilerplate/node-module-boilerplate/archive/beta.zip) or [stable](https://github.com/ptkdev-boilerplate/node-module-boilerplate/archive/main.zip).
+1. Clone this repository or download [nightly](https://github.com/ptkdev/json-token-replace/archive/nightly.zip), [beta](https://github.com/ptkdev/json-token-replace/archive/beta.zip) or [stable](https://github.com/ptkdev/json-token-replace/archive/main.zip).
 2. Run `npm run init`
 3. Run `npm run dev`
-
-#### 💾 Setup Project
-
-If you want replace all strings (example: package name, author, urls, etc...) in markdown file, source files and others files of this project you need edit `setup.json` with correct values and run `npm run setup`.
 
 ## 📚 Documentation
 
@@ -98,7 +91,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev-boilerplate/node-module-boilerplate/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-module-boilerplate/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-module-boilerplate/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev/json-token-replace/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev/json-token-replace/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev/json-token-replace/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

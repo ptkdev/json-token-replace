@@ -7,9 +7,9 @@
  * @license: MIT License
  *
  */
-import m from "@app/functions/module";
+import jtr from "@app/functions/jtr";
 
 test("show hello world", async () => {
-	const { app } = await m({ text: "hello-world" });
-	expect(app()).toBe("hello-world");
+	const { json } = await jtr({ text: "hello-world" });
+	expect(json()).toBe("hello-world");
 });
